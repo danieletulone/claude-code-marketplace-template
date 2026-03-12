@@ -1,7 +1,7 @@
 ---
 name: validate-plugin
 description: Validate a Claude Code plugin's structure, configuration, and marketplace registration. Use when user wants to check, validate, or verify a plugin.
-user_invocable: true
+user-invocable: true
 ---
 
 # Validate Plugin
@@ -17,6 +17,7 @@ The user provides a plugin name or path. If just a name, look in `plugins/<name>
 Run ALL of the following checks and report results as a checklist:
 
 ### 1. File Structure
+
 - [ ] `plugins/<name>/` directory exists
 - [ ] `.claude-plugin/plugin.json` exists and is valid JSON
 - [ ] `hooks/hooks.json` exists and is valid JSON
@@ -25,6 +26,7 @@ Run ALL of the following checks and report results as a checklist:
 - [ ] `README.md` exists
 
 ### 2. plugin.json
+
 - [ ] Has required fields: `name`, `version`, `description`, `author`
 - [ ] `name` matches the directory name
 - [ ] `version` follows semver format (e.g. `1.0.0`)
@@ -32,6 +34,7 @@ Run ALL of the following checks and report results as a checklist:
 - [ ] `keywords` is an array of strings
 
 ### 3. hooks.json
+
 - [ ] Has `description`, `version`, `author`, `hooks` fields
 - [ ] `version` matches `plugin.json` version
 - [ ] Each hook event is valid: `SessionStart`, `Stop`, `PreToolUse`, `PostToolUse`
@@ -40,6 +43,7 @@ Run ALL of the following checks and report results as a checklist:
 - [ ] Commands use `${CLAUDE_PLUGIN_ROOT}` for paths (not hardcoded)
 
 ### 4. Scripts
+
 - [ ] All `.js` files have `#!/usr/bin/env node` shebang
 - [ ] `PLUGIN_NAME` constant matches `plugin.json` name
 - [ ] Scripts end with `process.exit(0)` or `process.exit()`
@@ -47,6 +51,7 @@ Run ALL of the following checks and report results as a checklist:
 - [ ] Stop hook scripts have the duplicate execution guard (lock file pattern)
 
 ### 5. Marketplace Registration
+
 - [ ] Plugin is listed in `.claude-plugin/marketplace.json`
 - [ ] `name` in marketplace matches `plugin.json` name
 - [ ] `source` path is correct (`./plugins/<name>`)

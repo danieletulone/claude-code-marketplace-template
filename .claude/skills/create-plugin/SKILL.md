@@ -1,7 +1,7 @@
 ---
 name: create-plugin
 description: Scaffold a new Claude Code plugin from the example template. Use when user wants to create, scaffold, or start a new plugin.
-user_invocable: true
+user-invocable: true
 ---
 
 # Create Plugin
@@ -11,6 +11,7 @@ You are scaffolding a new Claude Code plugin for the marketplace at `this market
 ## Steps
 
 1. **Ask the user** for these details (skip any they already provided):
+
    - Plugin name (kebab-case, e.g. `hook-my-feature`)
    - One-line description
    - Author name
@@ -21,6 +22,7 @@ You are scaffolding a new Claude Code plugin for the marketplace at `this market
 2. **Copy the template** from `plugins/example/` to `plugins/<plugin-name>/`.
 
 3. **Replace all placeholders** in the copied files:
+
    - In `.claude-plugin/plugin.json`: set `name`, `description`, `author`, `keywords`.
    - In `hooks/hooks.json`: set `description`, `author`, `lastUpdated` (today's date). Configure only the hook events the user requested — remove unused hook event sections.
    - In `scripts/init-config.js`: set `PLUGIN_NAME` constant.
@@ -28,6 +30,7 @@ You are scaffolding a new Claude Code plugin for the marketplace at `this market
    - In `README.md`: update the title and description.
 
 4. **Register the plugin** in `.claude-plugin/marketplace.json` by adding an entry to the `plugins` array:
+
    ```json
    {
      "name": "<plugin-name>",

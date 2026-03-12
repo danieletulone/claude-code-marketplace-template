@@ -1,7 +1,7 @@
 ---
 name: update-readme
 description: Regenerate the marketplace README.md with the current plugin catalog. Use when user wants to update, refresh, or sync the README after adding, removing, or modifying plugins.
-user_invocable: true
+user-invocable: true
 ---
 
 # Update README
@@ -19,15 +19,16 @@ You are regenerating the marketplace `README.md` by reading the template and inj
 4. **Generate the plugins section** to replace the content between `<!-- PLUGINS:START -->` and `<!-- PLUGINS:END -->` markers in the template:
 
    - If there are **no plugins**, use:
+
      ```
      No plugins registered yet. Use `/create-plugin` to get started.
      ```
 
    - If there **are plugins**, generate a markdown table:
      ```markdown
-     | Plugin | Description | Version | Keywords |
-     |--------|-------------|---------|----------|
-     | [`plugin-name`](plugins/plugin-name/) | What it does | 1.0.0 | `keyword1`, `keyword2` |
+     | Plugin                                | Description  | Version | Keywords               |
+     | ------------------------------------- | ------------ | ------- | ---------------------- |
+     | [`plugin-name`](plugins/plugin-name/) | What it does | 1.0.0   | `keyword1`, `keyword2` |
      ```
 
 5. **Write** the result to `README.md`, replacing the existing file.

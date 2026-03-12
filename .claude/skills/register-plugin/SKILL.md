@@ -1,7 +1,7 @@
 ---
 name: register-plugin
 description: Register an existing plugin in the marketplace.json. Use when user wants to add, register, or publish a plugin to the marketplace.
-user_invocable: true
+user-invocable: true
 ---
 
 # Register Plugin
@@ -15,12 +15,14 @@ You are adding a plugin to the marketplace registry at `this marketplace reposit
 2. **Check** that the plugin isn't already registered in `.claude-plugin/marketplace.json`.
 
 3. **Ask the user** for the category if not obvious from the plugin content:
+
    - `hooks` — session lifecycle automation
    - `productivity` — development workflow tools
    - `game-development` — game engine toolkits
    - `3d-development` — 3D software automation
 
 4. **Add the entry** to the `plugins` array in `.claude-plugin/marketplace.json`:
+
    ```json
    {
      "name": "<from plugin.json>",

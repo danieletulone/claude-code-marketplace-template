@@ -1,7 +1,7 @@
 ---
 name: generate-readme
 description: Generate the marketplace README.md from the template. Use when user wants to generate, create, or initialize the README for the first time after personalizing the template.
-user_invocable: true
+user-invocable: true
 ---
 
 # Generate README

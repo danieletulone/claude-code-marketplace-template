@@ -1,7 +1,7 @@
 ---
 name: update-plugin-readme
 description: Regenerate a plugin's README.md from its metadata and hook configuration. Use when user wants to update, refresh, or sync a plugin's README after making changes.
-user_invocable: true
+user-invocable: true
 ---
 
 # Update Plugin README
@@ -22,7 +22,7 @@ The user provides a plugin name or path. If just a name, look in `plugins/<name>
 
 4. **Generate** the `README.md` with this structure:
 
-   ```markdown
+   ````markdown
    # <plugin-name>
 
    > <description>
@@ -34,6 +34,7 @@ The user provides a plugin name or path. If just a name, look in `plugins/<name>
    ```bash
    /plugin install <plugin-name>@<marketplace-name>
    ```
+   ````
 
    ## What it does
 
@@ -41,21 +42,24 @@ The user provides a plugin name or path. If just a name, look in `plugins/<name>
 
    ## Hook Events
 
-   | Event | Description | Timeout |
-   |-------|-------------|---------|
+   | Event   | Description   | Timeout     |
+   | ------- | ------------- | ----------- |
    | <event> | <description> | <timeout>ms |
 
    ## Configuration
 
    After installation, configuration is stored in `.plugin-config/<plugin-name>.json`.
 
-   | Option | Default | Description |
-   |--------|---------|-------------|
+   | Option  | Default   | Description            |
+   | ------- | --------- | ---------------------- |
    | `<key>` | `<value>` | <inferred description> |
 
    ## Keywords
 
    `keyword1`, `keyword2`, `keyword3`
+
+   ```
+
    ```
 
 5. **Read** `.claude-plugin/marketplace.json` to get the marketplace name for the install command.

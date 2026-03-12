@@ -1,7 +1,7 @@
 ---
 name: rename-marketplace
 description: Rename all template placeholders after cloning. Use when user wants to personalize, rename, initialize, or set up their marketplace with their own name and GitHub username.
-user_invocable: true
+user-invocable: true
 ---
 
 # Rename Marketplace
@@ -19,10 +19,10 @@ Ask the user for (skip any they already provided):
 
 Perform the following replacements across the entire repository:
 
-| Placeholder | Replace with |
-|---|---|
-| `your-marketplace` | the marketplace name |
-| `your-name` | the GitHub username/org |
+| Placeholder        | Replace with            |
+| ------------------ | ----------------------- |
+| `your-marketplace` | the marketplace name    |
+| `your-name`        | the GitHub username/org |
 
 ## Files to update
 
