@@ -33,10 +33,10 @@ Apply replacements in ALL of these files:
 - `GUIDE.md`
 - `NOTICE`
 - `LICENSE`
-- `.claude/skills/create-plugin.md`
-- `.claude/skills/bump-plugin.md`
-- `.claude/skills/validate-plugin.md`
-- `.claude/skills/register-plugin.md`
+- `.claude/skills/create-plugin/SKILL.md`
+- `.claude/skills/bump-plugin/SKILL.md`
+- `.claude/skills/validate-plugin/SKILL.md`
+- `.claude/skills/register-plugin/SKILL.md`
 
 ## Steps
 
